@@ -6,6 +6,7 @@ function App() {
   const[toDos,setToDos]=useState([])
   const[toDo,setTodo]=useState('')
   const[today,setDay]=useState('')
+  const[option,setOptiion]=useState("all")
 
   useEffect(()=>{
     console.log("Use effect running");
@@ -30,14 +31,28 @@ const addToDo=()=>{
 
 const showToDo=()=>{
   console.log(toDos);
+  
 }
 
 
+const showOption= ()=>{
+  console.log("heloo");
+  console.log(option);
+}
+
   return (
     <div className="app">
+      <button onClick={showOption}>Click ME</button>
       <div className="mainHeading">
         <h1 onClick={showToDo}>ToDo List</h1>
       </div>
+      
+      <div style={{color:"white",paddingTop:"50px",paddingLeft:"10px",paddingBottom:"50px"}}>
+        <input className="radioButton" type="radio" value="all" name="task"  onChange={(e)=>{setOptiion(e.target.value)}} /> All Task
+        <input className="radioButton" type="radio" value="done" name="task" onChange={(e)=>{setOptiion(e.target.value)}}/> Completed Task
+        <input className="radioButton" type="radio" value="pending" name="task"onChange={(e)=>{setOptiion(e.target.value)}} /> Pending Task
+      </div>
+       
       <div className="subHeading">
         <br />
         <h2>Whoop, it's {today} 🌝 ☕ </h2>

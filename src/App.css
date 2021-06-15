@@ -23,6 +23,11 @@ h2 {
   color: white;
 }
 
+.radioButton{
+
+  margin-left: 10px;
+
+}
 .app .input {
   display: flex;
   justify-content: center;
