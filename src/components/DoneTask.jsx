@@ -8,7 +8,7 @@ function DoneTask() {
 
     return (
         <div className="app">
-        <button onClick={showOption}>Click ME</button>
+        
 
         <div className="mainHeading">
             <h1 onClick={showToDo}>ToDo List</h1>

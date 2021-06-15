@@ -5,7 +5,7 @@ function PendingTask() {
     const { toDo, toDos, today, option, setTodo, setToDos, day, addToDo, showToDo, showOption, setOptiion } = useContext(AppContext)
     return (
         <div className="app">
-        <button onClick={showOption}>Click ME</button>
+        
 
         <div className="mainHeading">
             <h1 onClick={showToDo}>ToDo List</h1>
